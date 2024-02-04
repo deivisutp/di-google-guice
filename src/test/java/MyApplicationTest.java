@@ -1,3 +1,4 @@
+
 import org.junit.jupiter.api.*;
 
 
@@ -7,6 +8,7 @@ import com.google.inject.Injector;
 import com.journaldev.di.consumer.MyApplication;
 import com.journaldev.di.services.MessageService;
 import com.journaldev.di.services.MockMessageService;
+
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class MyApplicationTest {
@@ -35,5 +37,4 @@ public class MyApplicationTest {
 		MyApplication appTest = injector.getInstance(MyApplication.class);
 		Assertions.assertEquals(true, appTest.sendMessage("Hi Pankaj", "pankaj@abc.com"));;
 	}
-
 }
